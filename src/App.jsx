@@ -5,6 +5,7 @@ function App() {
   const [language, setLanguage] = useState('vi')
   const [activeTab, setActiveTab] = useState('longan')
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [hoveredArea, setHoveredArea] = useState(null)
 
   return (
     <div className="min-h-screen relative">
@@ -203,12 +204,184 @@ function App() {
             QUY HOẠCH & TIỆN ÍCH
           </h2>
           
-          <div className="relative w-full">
+          <div className="relative inline-block w-full">
+            {/* 1. Ảnh gốc */}
             <img 
               src="https://waterpoint.com.vn/storage/images/waterpoint-map-tongthe-1920-960-2023.jpg" 
-              alt="Quy hoạch tổng thể Waterpoint" 
-              className="w-full h-auto"
+              alt="Map"
+              className="block w-full h-auto"
             />
+          
+            {/* 2. Lớp phủ SVG */}
+            {/* viewBox="0 0 [WIDTH] [HEIGHT]" - Phải khớp kích thước ảnh gốc để toạ độ chính xác */}
+            <svg 
+              viewBox="0 0 1920 960" 
+              className="absolute inset-0 w-full h-full pointer-events-none"
+            >
+              <a 
+                className="relative" 
+                href="https://javascript.info/try-catch" 
+                target="_self"
+                onMouseEnter={() => setHoveredArea('area1')}
+                onMouseLeave={() => setHoveredArea(null)}
+              >
+                <polygon 
+                  /* Toạ độ từ coords của bạn */
+                  points="968,522,962,550,962,572,968,616,968,657,946,657,943,685,962,688,959,707,879,697,760,682,681,682,593,692,609,512,760,515,899,519,902,499,971,499"
+                  
+                  /* Style: Mặc định trong suốt, Hover thì hiện màu */
+                  className="fill-transparent stroke-transparent hover:fill-white/40 hover:stroke-green-500/50 stroke-6 cursor-pointer transition-all duration-300 pointer-events-auto"
+                />
+              </a>
+              <a 
+                className="relative" 
+                href="https://javascript.info/try-catch" 
+                target="_self"
+                onMouseEnter={() => setHoveredArea('area2')}
+                onMouseLeave={() => setHoveredArea(null)}
+              >
+                <polygon 
+                  /* Toạ độ từ coords của bạn */
+                  points="968,262,573,475,608,480,608,508,902,515,906,484,1099,488,1154,465"
+                  
+                  /* Style: Mặc định trong suốt, Hover thì hiện màu */
+                  className="fill-transparent stroke-transparent hover:fill-white/40 hover:stroke-green-500/50 stroke-6 cursor-pointer transition-all duration-300 pointer-events-auto"
+                />
+              </a>
+              <a 
+                className="relative" 
+                href="https://javascript.info/try-catch" 
+                target="_self"
+                onMouseEnter={() => setHoveredArea('area3')}
+                onMouseLeave={() => setHoveredArea(null)}
+              >
+                <polygon 
+                  /* Toạ độ từ coords của bạn */
+                  points="931,218,1182,490,1518,534,1280,306,1145,323,1136,310,1126,306,1111,305,1094,308,1078,300,1070,238"
+                  
+                  /* Style: Mặc định trong suốt, Hover thì hiện màu */
+                  className="fill-transparent stroke-transparent hover:fill-white/40 hover:stroke-yellow-500/50 stroke-6 cursor-pointer transition-all duration-300 pointer-events-auto"
+                />
+              </a>
+              <a 
+                className="relative" 
+                href="https://javascript.info/try-catch" 
+                target="_self"
+                onMouseEnter={() => setHoveredArea('area4')}
+                onMouseLeave={() => setHoveredArea(null)}
+              >
+                <polygon 
+                  /* Toạ độ từ coords của bạn */
+                  points="400,403,393,444,417,473,571,476,965,261,927,219,855,195,839,214,827,229,809,246,780,265,739,288,697,311,668,322,649,334,609,358,563,382,512,394,471,402"
+                  
+                  /* Style: Mặc định trong suốt, Hover thì hiện màu */
+                  className="fill-transparent stroke-transparent hover:fill-white/40 hover:stroke-green-500/50 stroke-6 cursor-pointer transition-all duration-300 pointer-events-auto"
+                />
+              </a>
+            </svg>
+
+            {/* Tooltip hiển thị khi hover */}
+            {hoveredArea === 'area1' && (
+              <div 
+                className="absolute animate-fadeIn top-[30%] left-[10%] z-10 bg-white/90 shadow-2xl rounded-lg p-6 border-2 border-teal-500 pointer-events-none "
+                style={{
+                  maxWidth: '400px'
+                }}
+              >
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-teal-500 to-teal-600 rounded-full flex items-center justify-center flex-shrink-0">
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                    </svg>
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-xl font-bold text-teal-700 mb-2">PHÂN KHU AQUARIA</h3>
+                    <p className="text-gray-700 text-sm leading-relaxed mb-3">
+                      Đối xứng với Rivera là phân khu Aquaria, cũng tiếp giáp mặt sông cho tầm nhìn khoáng đạt và Bến du thuyền riêng, hệ thống kênh đào len lỏi toàn khu tạo nên bầu không khí trong lành mát mẻ,… khiến mỗi ngôi nhà ở đây trở thành một tổ ấm yên bình, là nơi thả mình sau những lo toan, là nơi đáng sống và để thuộc về…
+                    </p>
+                    {/* <button className="mt-4 bg-gradient-to-r from-teal-500 to-teal-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:shadow-lg transition-all duration-300">
+                      Xem chi tiết →
+                    </button> */}
+                  </div>
+                </div>
+              </div>
+            )}
+            {/* Tooltip hiển thị khi hover */}
+            {hoveredArea === 'area2' && (
+              <div 
+                className="absolute animate-fadeIn top-[20%] left-[20%] z-10 bg-white/90 shadow-2xl rounded-lg p-6 border-2 border-teal-500 pointer-events-none "
+                style={{
+                  maxWidth: '400px'
+                }}
+              >
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-teal-500 to-teal-600 rounded-full flex items-center justify-center flex-shrink-0">
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                    </svg>
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-xl font-bold text-teal-700 mb-2">PHÂN KHU AQUARIA</h3>
+                    <p className="text-gray-700 text-sm leading-relaxed mb-3">
+                      Đối xứng với Rivera là phân khu Aquaria, cũng tiếp giáp mặt sông cho tầm nhìn khoáng đạt và Bến du thuyền riêng, hệ thống kênh đào len lỏi toàn khu tạo nên bầu không khí trong lành mát mẻ,… khiến mỗi ngôi nhà ở đây trở thành một tổ ấm yên bình, là nơi thả mình sau những lo toan, là nơi đáng sống và để thuộc về…
+                    </p>
+                    {/* <button className="mt-4 bg-gradient-to-r from-teal-500 to-teal-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:shadow-lg transition-all duration-300">
+                      Xem chi tiết →
+                    </button> */}
+                  </div>
+                </div>
+              </div>
+            )}
+            {hoveredArea === 'area3' && (
+              <div 
+                className="absolute animate-fadeIn top-[20%] left-[70%] z-10 bg-white/90 shadow-2xl rounded-lg p-6 border-2 border-teal-500 pointer-events-none "
+                style={{
+                  maxWidth: '400px'
+                }}
+              >
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-teal-500 to-teal-600 rounded-full flex items-center justify-center flex-shrink-0">
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                    </svg>
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-xl font-bold text-teal-700 mb-2">PHÂN KHU AQUARIA</h3>
+                    <p className="text-gray-700 text-sm leading-relaxed mb-3">
+                      Đối xứng với Rivera là phân khu Aquaria, cũng tiếp giáp mặt sông cho tầm nhìn khoáng đạt và Bến du thuyền riêng, hệ thống kênh đào len lỏi toàn khu tạo nên bầu không khí trong lành mát mẻ,… khiến mỗi ngôi nhà ở đây trở thành một tổ ấm yên bình, là nơi thả mình sau những lo toan, là nơi đáng sống và để thuộc về…
+                    </p>
+                    {/* <button className="mt-4 bg-gradient-to-r from-teal-500 to-teal-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:shadow-lg transition-all duration-300">
+                      Xem chi tiết →
+                    </button> */}
+                  </div>
+                </div>
+              </div>
+            )}
+            {hoveredArea === 'area4' && (
+              <div 
+                className="absolute animate-fadeIn top-[20%] left-[10%] z-10 bg-white/90 shadow-2xl rounded-lg p-6 border-2 border-teal-500 pointer-events-none "
+                style={{
+                  maxWidth: '400px'
+                }}
+              >
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-teal-500 to-teal-600 rounded-full flex items-center justify-center flex-shrink-0">
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                    </svg>
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-xl font-bold text-teal-700 mb-2">PHÂN KHU AQUARIA</h3>
+                    <p className="text-gray-700 text-sm leading-relaxed mb-3">
+                      Đối xứng với Rivera là phân khu Aquaria, cũng tiếp giáp mặt sông cho tầm nhìn khoáng đạt và Bến du thuyền riêng, hệ thống kênh đào len lỏi toàn khu tạo nên bầu không khí trong lành mát mẻ,… khiến mỗi ngôi nhà ở đây trở thành một tổ ấm yên bình, là nơi thả mình sau những lo toan, là nơi đáng sống và để thuộc về…
+                    </p>
+                    {/* <button className="mt-4 bg-gradient-to-r from-teal-500 to-teal-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:shadow-lg transition-all duration-300">
+                      Xem chi tiết →
+                    </button> */}
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </section>
@@ -671,7 +844,7 @@ function App() {
               </div>
             </div>
           </div>
-
+      
           {/* Copyright */}
           <div className="mt-8 md:mt-12 pt-6 md:pt-8 border-t border-white/10 text-center">
             <p className="text-xs md:text-sm text-teal-400">All Rights Reserved 2023 © Nam Long Group</p>
