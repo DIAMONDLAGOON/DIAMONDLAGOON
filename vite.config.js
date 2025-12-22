@@ -12,5 +12,5 @@ export default defineConfig({
     }),
     tailwindcss(),
   ],
-  base: '/LandingPage_waterpoint/',
+  base: '/DIAMOND_LAGOON/',
 })
