@@ -78,7 +78,7 @@ function Content1() {
           viewport={{ once: true }}
           className="text-[2rem] leading-10 whitespace-pre-wrap font-display font-semibold sm:text-[2rem] md:text-[2rem] text-[#082B26] tracking-[5px]"
         >
-          THAY TIÊU ĐỀ CHỔ NÀY NÈ HUY
+          GIỚI THIỆU
         </motion.h2>
 
         <div className="pl-0 md:pl-8 space-y-4">
@@ -89,10 +89,7 @@ function Content1() {
               transition={{ duration: 0.6, delay: 0.4 }}
               viewport={{ once: true }}
             >
-              Tận hưởng một thiên đường của những giấc quan tại Banyan Tree Lãng
-              Cô, một khu nghỉ dưỡng biển với 89 căn biệt thự hạng sang, tất cả
-              đều có hồ bơi riêng, nằm nép mình giữa biển Đông xanh ngắt và dãy
-              Trường Sơn hùng vĩ.
+              Trong bối cảnh biến đổi khí hậu, sự suy giảm hệ sinh thái ven đầm và áp lực <span className="font-bold">đô thị hóa</span>, đồ án đề xuất chiến lược quy hoạch một <span className="font-bold">khu đô thị sinh thái chuyển tiếp</span> tại khu vực Thôn Vinh Quang 2 – Đầm Thị Nại – Cồn Chim
             </motion.p>
 
             <motion.p
@@ -101,37 +98,7 @@ function Content1() {
               transition={{ duration: 0.6, delay: 0.6 }}
               viewport={{ once: true }}
             >
-              Tọa lạc gần ba thành phố văn hóa du lịch lớn:{" "}
-              <a
-                href="#"
-                className="text-[#c49b63] hover:underline transition-colors"
-              >
-                Huế
-              </a>
-              ,{" "}
-              <a
-                href="#"
-                className="text-[#c49b63] hover:underline transition-colors"
-              >
-                Đà Nẵng
-              </a>
-              ,{" "}
-              <a
-                href="#"
-                className="text-[#c49b63] hover:underline transition-colors"
-              >
-                Hội An
-              </a>
-              , kết nối du khách với ba di sản văn hóa nổi tiếng được{" "}
-              <a
-                href="#"
-                className="text-[#c49b63] hover:underline transition-colors"
-              >
-                UNESCO
-              </a>{" "}
-              công nhận: Phố cổ Hội An, Kính thành Huế và Thánh địa Mỹ Sơn,
-              Banyan Tree Lãng Cô là một điểm đến hoàn hảo để khám phá về nguyên
-              sơ và thơ mộng của dải đất duyên hải miền Trung Việt Nam.
+              Mục tiêu của đồ án không chỉ cải thiện chất lượng sống, mà còn hướng tới mô hình <span className="font-bold">"Đô thị du lịch sinh thái"</span>, nơi cư dân phát triển kinh tế dựa trên dịch vụ du lịch và nuôi trồng bền vững, song hành cùng việc tái tạo cảnh quan, phục hội và bảo tồn đa dạng sinh học Đầm Thị Nại..
             </motion.p>
           </div>
         </div>

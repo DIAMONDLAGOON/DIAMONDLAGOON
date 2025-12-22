@@ -37,19 +37,20 @@ function Hero() {
 
       {/* Content Overlay */}
       <div className="relative h-full flex flex-col items-center justify-center text-white px-4">
+        <img src="IMG_1827.JPG" alt="Logo" className="w-20 h-20 mb-6" />
         {/* Main Title */}
         <h1 className="text-4xl md:text-5xl lg:text-7xl font-light tracking-[0.3em] text-center mb-8 drop-shadow-lg">
-          BANYAN TREE LÃNG CÔ
+          DIAMOND LAGOON 
         </h1>
 
         {/* Subtitle */}
         <p className="text-lg md:text-xl lg:text-2xl font-light mb-12 drop-shadow-md">
-          Miền Trung Việt Nam
+          Viên bảo ngọc thuần khiết giữa đầm Thị Nại
         </p>
 
         {/* Description */}
         <p className="text-sm md:text-base lg:text-lg font-light max-w-3xl text-center drop-shadow-md px-4">
-          Một trong những khu nghỉ dưỡng đẳng cấp tại Việt Nam đạt chứng nhận Hai MICHELINE Keys 2025
+          Đô thị ven đầm: Thích ứng với biến đổi khí hậu & tái sinh sinh kế bền vững  vùng ven đầm trên nền phát triển du lịch sinh thái gắn kết cộng đồng Cồn Chim
         </p>
       </div>
 
