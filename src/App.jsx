@@ -20,7 +20,7 @@ function App() {
       <Hero />
       <Content1 />
       <Content2 />
-      <Content3 />
+      {/* <Content3 /> */}
       <Content4 />
       <Content5 />
       {/* <LuxuryCarousel /> */}

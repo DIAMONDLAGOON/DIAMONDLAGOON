@@ -89,7 +89,7 @@ function Content1() {
               transition={{ duration: 0.6, delay: 0.4 }}
               viewport={{ once: true }}
             >
-              Trong bối cảnh biến đổi khí hậu, sự suy giảm hệ sinh thái ven đầm và áp lực <span className="font-bold">đô thị hóa</span>, đồ án đề xuất chiến lược quy hoạch một <span className="font-bold">khu đô thị sinh thái chuyển tiếp</span> tại khu vực Thôn Vinh Quang 2 – Đầm Thị Nại – Cồn Chim
+              Trong bối cảnh biến đổi khí hậu, sự suy giảm hệ sinh thái ven đầm và áp lực <span className="font-bold">đô thị hóa</span>, đồ án đề xuất chiến lược quy hoạch một <span className="font-bold">khu đô thị sinh thái chuyển tiếp</span> tại khu vực Thôn Vinh Quang 2 – Đầm Thị Nại – Cồn Chim.
             </motion.p>
 
             <motion.p
@@ -98,7 +98,7 @@ function Content1() {
               transition={{ duration: 0.6, delay: 0.6 }}
               viewport={{ once: true }}
             >
-              Mục tiêu của đồ án không chỉ cải thiện chất lượng sống, mà còn hướng tới mô hình <span className="font-bold">"Đô thị du lịch sinh thái"</span>, nơi cư dân phát triển kinh tế dựa trên dịch vụ du lịch và nuôi trồng bền vững, song hành cùng việc tái tạo cảnh quan, phục hội và bảo tồn đa dạng sinh học Đầm Thị Nại..
+              Mục tiêu của đồ án không chỉ cải thiện chất lượng sống, mà còn hướng tới mô hình <span className="font-bold">"Đô thị du lịch sinh thái"</span>, nơi cư dân phát triển kinh tế dựa trên dịch vụ du lịch và nuôi trồng bền vững, song hành cùng việc tái tạo cảnh quan, phục hội và bảo tồn đa dạng sinh học Đầm Thị Nại.
             </motion.p>
           </div>
         </div>

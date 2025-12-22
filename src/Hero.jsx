@@ -27,9 +27,9 @@ function Hero() {
           loop
           muted
           playsInline
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover scale-135"
         >
-          <source src="https://www.pexels.com/download/video/6981411/" type="video/mp4" />
+          <source src="TEST.mp4" type="video/mp4" />
         </video>
         {/* Dark Overlay */}
         <div className="absolute inset-0 bg-black/20"></div>
@@ -37,7 +37,7 @@ function Hero() {
 
       {/* Content Overlay */}
       <div className="relative h-full flex flex-col items-center justify-center text-white px-4">
-        <img src="IMG_1827.JPG" alt="Logo" className="w-20 h-20 mb-6" />
+        <img src="LOGO.png" alt="Logo" className="w-40 h-40 mb-6" />
         {/* Main Title */}
         <h1 className="text-4xl md:text-5xl lg:text-7xl font-light tracking-[0.3em] text-center mb-8 drop-shadow-lg">
           DIAMOND LAGOON 

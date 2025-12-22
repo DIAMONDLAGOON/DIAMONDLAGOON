@@ -20,7 +20,6 @@ function Item({ icon, children }) {
 function Content2() {
   return (
     <section className="relative w-full bg-white">
-      <div className="absolute inset-0 bg-gray-100/50 text-red-600 font-bold text-2xl"> Cái này có để không ?</div>
       <div className="mx-auto w-full max-w-[1700px] px-5 lg:px-12 py-10 lg:py-14">
         <div className="flex flex-col lg:flex-row lg:items-stretch">
           {/* Main columns */}
@@ -37,7 +36,7 @@ function Content2() {
                     href="#"
                     className="font-niramit font-semibold text-[#082B26] underline underline-offset-4"
                   >
-                    Banyan Tree Lang Co
+                    Diamond Lagoon
                   </a>
 
                   <div className="flex items-center gap-2">
@@ -67,7 +66,7 @@ function Content2() {
 
               <div className="mt-8 space-y-5">
                 <div className="text-[#082B26] font-niramit leading-relaxed">
-                  Thôn Cù Dù, Xã Chân Mây - Lăng Cô, Thành phố Huế, Việt Nam
+                  Thôn Vinh Quang 2, xã Phước Sơn, huyện Tuy Phước, tỉnh Bình Định
                 </div>
 
                 <a
@@ -93,7 +92,7 @@ function Content2() {
                     </Icon>
                   }
                 >
-                  +84 234 3695 888
+                  +84 939742989
                 </Item>
 
                 <Item
@@ -109,25 +108,8 @@ function Content2() {
                   <a href="#" className="text-gray-600 underline underline-offset-4">
                     Reservations-
                     <br />
-                    Langco@banyantree.com
+                    contact@diamondlagoon.com
                   </a>
-                </Item>
-
-                <Item
-                  icon={
-                    <Icon>
-                      <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-                        <circle cx="12" cy="12" r="9" />
-                        <path d="M12 7v5l3 2" />
-                      </svg>
-                    </Icon>
-                  }
-                >
-                  <div className="text-gray-600 font-niramit">
-                    Giờ nhận phòng: <span className="text-[#082B26]">3:00 pm</span>
-                    <br />
-                    Giờ trả phòng <span className="text-[#082B26]">12:00 pm</span>
-                  </div>
                 </Item>
               </div>
             </div>
@@ -152,7 +134,7 @@ function Content2() {
                     </Icon>
                   }
                 >
-                  Airport Shuttle
+                  Ecological education
                 </Item>
 
                 <Item
@@ -169,7 +151,7 @@ function Content2() {
                     </Icon>
                   }
                 >
-                  Banyan Tree Gallery
+                  Kayaking
                 </Item>
 
                 <Item
@@ -185,7 +167,7 @@ function Content2() {
                     </Icon>
                   }
                 >
-                  Banyan Tree Spa
+                  Bird watching
                 </Item>
 
                 <Item
@@ -199,7 +181,7 @@ function Content2() {
                     </Icon>
                   }
                 >
-                  Bicycle Rental
+                  Exploring local homes
                 </Item>
 
                 <Item
@@ -212,7 +194,7 @@ function Content2() {
                     </Icon>
                   }
                 >
-                  Chapel
+                  Culinary experiences
                 </Item>
 
                 <Item
@@ -228,7 +210,7 @@ function Content2() {
                     </Icon>
                   }
                 >
-                  Destination Dining
+                  Wave Sidewalks
                 </Item>
 
                 <Item
@@ -244,7 +226,7 @@ function Content2() {
                     </Icon>
                   }
                 >
-                  Fitness Centre
+                  Resort bungalows
                 </Item>
 
                 <Item
@@ -260,22 +242,9 @@ function Content2() {
                     </Icon>
                   }
                 >
-                  Golf
+                  Ecological parks
                 </Item>
 
-                <Item
-                  icon={
-                    <Icon>
-                      <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-                        <rect x="4" y="6" width="16" height="14" rx="2" />
-                        <path d="M8 10h8" />
-                        <path d="M8 14h5" />
-                      </svg>
-                    </Icon>
-                  }
-                >
-                  Meetings &amp; Events Facilities
-                </Item>
 
                 <Item
                   icon={
