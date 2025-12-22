@@ -1,9 +1,9 @@
 import { useEffect, useState, useRef } from "react";
 
-function Content4() {
+function Content4(props) {
   const [offsetY, setOffsetY] = useState(0);
   const sectionRef = useRef(null);
- 
+  const url = props.url;
   useEffect(() => {
     const handleScroll = () => {
       if (sectionRef.current) {
@@ -29,7 +29,7 @@ function Content4() {
         }}
       >
         <img
-          src="https://www.banyantree.com/_next/image?url=https%3A%2F%2Fwww.banyantree.com%2Fassets%2F2025-02%2Fbt-langco-Banyan%20Tree%20Lang%20Co%20-%20Resort%20Overview.jpg&w=3840&q=65"
+          src={url}
           alt="Biệt Thự"
           className="w-full h-full object-cover"
         />
@@ -50,7 +50,7 @@ function Content4() {
         </p>
 
         {/* CTA Button */}
-        <a href="https://photos.fife.usercontent.google.com/pw/AP1GczMlQ5x331fwr7VulkuiiL7zDhk50F-vwjs1oEvzCDTAjtKpDuPCR3j5Qg=w442-h957-s-no-gm?authuser=0">
+        <a href="https://www.facebook.com/huydaubua1709">
             <button className="flex items-center gap-3 px-8 py-4 border-2 border-white rounded-full hover:bg-white hover:text-gray-900 transition-all duration-300 group">
             <div className="w-8 h-8 rounded-full border-2 border-white flex items-center justify-center group-hover:border-gray-900 transition-all">
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

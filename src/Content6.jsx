@@ -14,7 +14,7 @@ const DESTINATIONS = [
     description:
       "Di tích đền tháp Chăm Pa bí ẩn trong thung lũng. Vẻ đẹp trầm mặc, cổ kính của kinh thành xưa.",
     image:
-      "https://www.banyantree.com/_next/image?url=https%3A%2F%2Fwww.banyantree.com%2Fassets%2F2025-03%2Fbt-langco-local-attractions.jpg&w=640&q=75",
+      "1.png",
   },
   {
     id: 2,
@@ -22,7 +22,7 @@ const DESTINATIONS = [
     description:
       "Hệ sinh thái quan trọng của Đông Dương. Vẻ đẹp trầm mặc, cổ kính của kinh thành xưa.",
     image:
-      "https://www.banyantree.com/_next/image?url=https%3A%2F%2Fwww.banyantree.com%2Fassets%2F2025-02%2FBT-langco-%20One-bedroom%20Seaview%20Hill%20Pool%20Villa%20-%20Private%20Pool.jpg&w=1920&q=75",
+      "2.png",
   },
   {
     id: 3,
@@ -30,40 +30,8 @@ const DESTINATIONS = [
     description:
       "Tuyệt Tình Cốc miền Trung với trời nước bao la. Vẻ đẹp trầm mặc, cổ kính của kinh thành xưa.",
     image:
-      "https://www.banyantree.com/_next/image?url=https%3A%2F%2Fwww.banyantree.com%2Fassets%2F2025-03%2Fbt-langco-myson.jpg&w=640&q=75",
-  },
-  {
-    id: 4,
-    title: "Phố Cổ Hội An",
-    description:
-      "Những ngôi nhà cổ phủ đầy rêu phong. Vẻ đẹp trầm mặc, cổ kính của kinh thành xưa.",
-    image:
-      "https://www.banyantree.com/_next/image?url=https%3A%2F%2Fwww.banyantree.com%2Fassets%2F2024-10%2Fbt-langco-local-attractions.jpg&w=640&q=75",
-  },
-  {
-    id: 6,
-    title: "Cố Đô Huế",
-    description:
-      "Vẻ đẹp trầm mặc, cổ kính của kinh thành xưa. Vẻ đẹp trầm mặc, cổ kính của kinh thành xưa.",
-    image:
-      "https://www.banyantree.com/_next/image?url=https%3A%2F%2Fwww.banyantree.com%2Fassets%2F2025-03%2Fbt-langco-hoian.jpg&w=640&q=75",
-  },
-  {
-    id: 7,
-    title: "Biển Cảnh Dương",
-    description:
-      "Bãi biển nguyên sơ tuyệt đẹp. Vẻ đẹp trầm mặc, cổ kính của kinh thành xưa.",
-    image:
-      "https://www.banyantree.com/_next/image?url=https%3A%2F%2Fwww.banyantree.com%2Fassets%2F2025-03%2Fbt-langco-local.jpg&w=640&q=75",
-  },
-  {
-    id: 8,
-    title: "Biển Cảnh Dương",
-    description:
-      "Bãi biển nguyên sơ tuyệt đẹp. Vẻ đẹp trầm mặc, cổ kính của kinh thành xưa.",
-    image:
-      "https://www.banyantree.com/_next/image?url=https%3A%2F%2Fwww.banyantree.com%2Fassets%2F2025-02%2Fbt-langco-%20Three-bedroom%20Oceanview%20Pool%20Villa%20-%20Private%20Pool%20with%20Sunrise.jpg&w=1920&q=75",
-  },
+      "3.png",
+  }
 ];
 
 const SwiperCarousel = () => {
@@ -80,7 +48,7 @@ const SwiperCarousel = () => {
         viewport={{ once: true }}
         className="font-semibold mb-10 md:mb-16 text-2xl md:text-4xl tracking-widest text-center z-10 drop-shadow-lg"
       >
-        Khám phá Miền Trung Việt Nam
+        Khám phá khu đô thị ven đầm
       </motion.h1>
 
       <div 

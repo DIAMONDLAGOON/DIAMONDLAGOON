@@ -55,13 +55,13 @@ function Hero() {
       </div>
 
       {/* Breadcrumb Navigation */}
-      <div className="absolute bottom-8 left-8 flex items-center gap-3 text-white text-sm z-10">
+      {/* <div className="absolute bottom-8 left-8 flex items-center gap-3 text-white text-sm z-10">
         <a href="#" className="hover:underline transition-all">Trang Chủ</a>
         <span className="opacity-60">&gt;</span>
         <a href="#" className="hover:underline transition-all">Vietnam</a>
         <span className="opacity-60">&gt;</span>
         <span className="font-semibold">Banyan Tree Lãng Cô</span>
-      </div>
+      </div> */}
 
       {/* Chat Icon */}
       {/* <div className="fixed bottom-8 right-8 z-50">
