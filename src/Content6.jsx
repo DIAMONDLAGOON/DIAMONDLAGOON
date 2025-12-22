@@ -70,7 +70,7 @@ const SwiperCarousel = () => {
   const swiperRef = useRef(null);
 
   return (
-    <div className="relative w-full h-[calc(100vh-150px)] bg-[#0f1912] overflow-hidden flex flex-col justify-center items-center text-white">
+    <div className="relative w-full md:h-[calc(100vh-50px)] bg-[#0f1912] pt-30 overflow-hidden flex flex-col justify-center items-center text-white">
       <div className="absolute inset-0 bg-[url('https://www.banyantree.com/_next/image?url=https%3A%2F%2Fwww.banyantree.com%2Fassets%2F2021-10%2FBG%202.jpg&w=3840&q=25')] bg-cover opacity-20 pointer-events-none" />
 
       <motion.h1 
@@ -83,12 +83,8 @@ const SwiperCarousel = () => {
         Khám phá Miền Trung Việt Nam
       </motion.h1>
 
-      <motion.div 
-        initial={{ opacity: 0, scale: 0.9 }}
-        whileInView={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-        viewport={{ once: true }}
-        className="relative mt-32 py-5 w-full max-w-[1400px] h-[500px] md:h-[800px] flex justify-center items-center"
+      <div 
+        className="relative mt-10  w-full max-w-[1400px] h-[450px] md:h-[650px] lg:h-[650px] xl:h-[750px] flex justify-center items-center"
       >
         <Swiper
           onBeforeInit={(swiper) => {
@@ -102,6 +98,12 @@ const SwiperCarousel = () => {
             768: {
               spaceBetween: 40,
             },
+            1024: {
+              spaceBetween: 50,
+            },
+            1280: {
+              spaceBetween: 60,
+            },
           }}
           loop={true}
           slideToClickedSlide={true}
@@ -110,7 +112,7 @@ const SwiperCarousel = () => {
           watchSlidesProgress={true}
           speed={600}
           grabCursor={true}
-          className="w-full h-full flex items-center"
+          className="w-full h-full flex items-center "
         >
           {DESTINATIONS.map((item) => (
             <SwiperSlide key={item.id} className="custom-slide">
@@ -178,7 +180,7 @@ const SwiperCarousel = () => {
         >
           <ChevronRight className="w-10 h-10 md:w-16 md:h-16" strokeWidth={1} />
         </motion.button>
-      </motion.div>
+      </div>
 
       <style jsx global>{`
         /* 1. CẤU HÌNH SLIDE CƠ BẢN */
@@ -194,6 +196,18 @@ const SwiperCarousel = () => {
         }
 
         @media (min-width: 768px) {
+          .custom-slide {
+            width: 300px;
+          }
+        }
+
+        @media (min-width: 1024px) {
+          .custom-slide {
+            width: 340px;
+          }
+        }
+
+        @media (min-width: 1280px) {
           .custom-slide {
             width: 380px;
           }
@@ -215,6 +229,18 @@ const SwiperCarousel = () => {
 
         @media (min-width: 768px) {
           .visual-box {
+            height: 300px;
+          }
+        }
+
+        @media (min-width: 1024px) {
+          .visual-box {
+            height: 340px;
+          }
+        }
+
+        @media (min-width: 1280px) {
+          .visual-box {
             height: 380px;
           }
         }
@@ -230,6 +256,22 @@ const SwiperCarousel = () => {
         }
 
         @media (min-width: 768px) {
+          .swiper-slide-active .visual-box,
+          .swiper-slide-duplicate-active .visual-box {
+            height: 380px;
+            transform: translateY(-50px);
+          }
+        }
+
+        @media (min-width: 1024px) {
+          .swiper-slide-active .visual-box,
+          .swiper-slide-duplicate-active .visual-box {
+            height: 440px;
+            transform: translateY(-70px);
+          }
+        }
+
+        @media (min-width: 1280px) {
           .swiper-slide-active .visual-box,
           .swiper-slide-duplicate-active .visual-box {
             height: 480px;
