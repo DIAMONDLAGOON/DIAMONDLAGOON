@@ -10,12 +10,13 @@ import LuxuryCarousel from "./LuxuryCarousel.jsx";
 import Content6 from "./Content6.jsx";
 import Footer from "./Footer.jsx";
 import Content6New from "./Content6New.jsx";
+import Content1new from "./Content1new.jsx";
 
 function App() {
   return (
     <div className="min-h-screen relative overflow-x-hidden">
       <Hero />
-      <Content1 />
+      <Content1new />
       <Content2 />
       {/* <Content3 /> */}
       <Content4 alt="resort nghỉ dưỡng" title="Resort nghỉ dưỡng sinh thái hạng sang" subtitle="Vỗ về tâm hồn giữa lòng thiên nhiên thuần khiết" url="anh1.png"/>
