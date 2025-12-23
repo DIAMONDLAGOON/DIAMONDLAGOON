@@ -12,5 +12,5 @@ export default defineConfig({
     }),
     tailwindcss(),
   ],
-  base: '/DIAMONDLAGOON/',
+  base: '/DIAMOND_LAGOON/',
 })
