@@ -38,7 +38,7 @@ function Content4(props) {
         <img
           src={url}
           alt={alts}
-          className="w-full h-full object-fit"
+          className="w-full h-full object-cover sm:object-fit"
         />
         {/* Dark Overlay */}
         <div className="absolute inset-0 bg-black/40"></div>
