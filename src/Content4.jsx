@@ -2,14 +2,21 @@ import { useEffect, useState, useRef } from "react";
 
 function Content4(props) {
   const [offsetY, setOffsetY] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef(null);
   const {url, alts, title, subtitle} = props;
+  
   useEffect(() => {
     const handleScroll = () => {
       if (sectionRef.current) {
         const rect = sectionRef.current.getBoundingClientRect();
         const scrollProgress = -rect.top;
         setOffsetY(scrollProgress * 0.5);
+        
+        // Trigger animation when section is in viewport
+        if (rect.top < window.innerHeight * 0.75 && rect.bottom > 0) {
+          setIsVisible(true);
+        }
       }
     };
 
@@ -34,23 +41,42 @@ function Content4(props) {
           className="w-full h-full object-fit"
         />
         {/* Dark Overlay */}
-        <div className="absolute inset-0 bg-black/50"></div>
+        <div className="absolute inset-0 bg-black/40"></div>
       </div>
 
       {/* Content Overlay */}
       <div className="relative h-full flex flex-col items-center justify-center text-white px-4">
         {/* Main Title */}
-        <h1 className="text-xl md:text-4xl lg:text-5xl font-bold tracking-[0.3em] text-center mb-8 drop-shadow-lg">
+        <h1 
+          className={`text-xl md:text-4xl lg:text-5xl font-bold tracking-[0.3em] text-center mb-8 drop-shadow-lg transition-all duration-1000 ${
+            isVisible 
+              ? 'opacity-100 translate-y-0' 
+              : 'opacity-0 translate-y-10'
+          }`}
+        >
           {title}
         </h1>
 
         {/* Subtitle */}
-        <p className="text-base md:text-lg lg:text-xl font-light max-w-4xl text-center mb-12 drop-shadow-md px-4">
+        <p 
+          className={`text-base md:text-lg lg:text-xl font-light max-w-4xl text-center mb-12 drop-shadow-md px-4 transition-all duration-1000 delay-300 ${
+            isVisible 
+              ? 'opacity-100 translate-y-0' 
+              : 'opacity-0 translate-y-10'
+          }`}
+        >
           {subtitle}
         </p>
 
         {/* CTA Button */}
-        <a href="https://www.facebook.com/huydaubua1709">
+        <a 
+          href="https://www.facebook.com/huydaubua1709"
+          className={`transition-all duration-1000 delay-500 ${
+            isVisible 
+              ? 'opacity-100 translate-y-0 scale-100' 
+              : 'opacity-0 translate-y-10 scale-95'
+          }`}
+        >
             <button className="flex items-center gap-3 px-8 py-4 border-2 border-white rounded-full hover:bg-white hover:text-gray-900 transition-all duration-300 group">
             <div className="w-8 h-8 rounded-full border-2 border-white flex items-center justify-center group-hover:border-gray-900 transition-all">
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
